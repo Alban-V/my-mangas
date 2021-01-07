@@ -1,1 +1,1 @@
-# my-mangas
+# My-mangas
