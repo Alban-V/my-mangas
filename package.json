@@ -1,0 +1,28 @@
+{
+  "name": "my-mangas",
+  "version": "1.0.0",
+  "description": "Api pour enregistrer ses mangas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alban-V/my-mangas.git"
+  },
+  "author": "Alban Vincent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alban-V/my-mangas/issues"
+  },
+  "homepage": "https://github.com/Alban-V/my-mangas#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
