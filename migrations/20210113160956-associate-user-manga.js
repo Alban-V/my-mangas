@@ -5,6 +5,12 @@ module.exports = {
     return queryInterface.createTable(
       'User_Manga',
       {
+        id: {
+          primaryKey: true,
+          allowNull: false,
+          autoIncrement: true,
+          type: Sequelize.INTEGER
+        },
         created_at: {
           allowNull:false,
           type: Sequelize.DATE,
@@ -14,18 +20,24 @@ module.exports = {
           type: Sequelize.DATE,
         },
         UserId: {
-          primaryKey
-        }
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'Users',
+            key: 'id',
+          }
+        },
+        MangaId: {
+          type: Sequelize.INTEGER,
+          references: {
+            model: 'Mangas',
+            key: 'id',
+          }
+        },
       }
     )
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
-     */
-  }
+    return queryInterface.dropTable('User_Manga');
+  },
 };
